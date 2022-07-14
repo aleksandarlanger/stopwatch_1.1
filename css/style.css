@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+}
+
+.stopwatch {
+  max-width: 400px;
+  min-height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.watchBody {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+  background-color: blue;
+}
+
+.counter {
+  margin-top: 2em;
+}
