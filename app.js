@@ -8,7 +8,7 @@ let minutesDisplay = 1;
 let msCounter = document.querySelector(".ms");
 let hundCounter = document.querySelector(".hund");
 let secCounter = document.querySelector(".sec");
-let minCounter = document.querySelector(".minutes");
+let minCounter = document.querySelector(".min");
 
 let isOn = 0;
 let isRunning = 0;
@@ -48,11 +48,16 @@ let cleartWatch = document
 
 function clear() {
   isOn = 0;
+  isRunning = 0;
   stop();
-  msCounter.textContent = 0;
-  hundCounter.textContent = 0;
-  secCounter.textContent = 0;
-  minCounter.textContent = 0;
+  msCounter.textContent = 00;
+  msDisplay = 99;
+  hundCounter.textContent = 00;
+  hundDisplay = 10;
+  secCounter.textContent = 00;
+  secondsDisplay = 1;
+  minCounter.textContent = 00;
+  minutesDisplay = 1;
 }
 
 // logic
@@ -63,6 +68,7 @@ let msTimer = () => {
 
   if (hundDisplay === 10) {
     hundDisplay = 00;
+    hundCounter.textContent = 00;
   } else if (msDisplay > 100) {
     msDisplay = 00;
   } else if (msDisplay < 10) {
