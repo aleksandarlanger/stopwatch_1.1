@@ -83,8 +83,9 @@ let hundTimer = () => {
 
 let secondsTimer = () => {
   isRunning = 1;
+
   secCounter.textContent = `${secondsDisplay++}`;
-  if (secondsDisplay === 59) {
+  if (secondsDisplay === 60) {
     hundDisplay = 0;
     secondsDisplay = 0;
     minCounter.textContent = minutesDisplay++;
